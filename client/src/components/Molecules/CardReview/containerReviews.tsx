@@ -17,7 +17,7 @@ function ContainerReviews() {
     });
     const {locations} = useAppSelector((state) => state.data);
     const {reviews} = useAppSelector((state) => state.data);
-    console.log(reviews);
+    // console.log(reviews);
     const dispatch = useAppDispatch();
     const [confirm , setConfirm] = useState(false);
 
@@ -31,7 +31,7 @@ function ContainerReviews() {
     };
     const handleButtonClick = async (e:any) => {
         e.preventDefault();
-        console.log(e.target.value);
+        // console.log(e.target.value);
         setReview({
             ...review,
             location: e.target.value,

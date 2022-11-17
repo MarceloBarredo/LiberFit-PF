@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer')
 
-var correo_origen='liberfit.xyz@gmail.com';
-var password_origen='gpgqfovwlyiviwkq';
+var correo_origen='liberfitapp@gmail.com';
+var password_origen='bduvihpclyoaaiei';
 
 const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",

@@ -3,6 +3,7 @@ import Perfil from '../../Atoms/Perfil/Perfil';
 import { CameraIcon, XMarkIcon, PencilIcon, ArrowUpTrayIcon, CheckIcon } from '@heroicons/react/24/outline';
 import  { changeProfileImage } from '../../../App/Action/Action'
 import { useAppDispatch, useAppSelector } from '../../../App/Hooks/Hooks';
+import Cookies from 'universal-cookie';
 
 const EditProfileImage = () => {
     
@@ -12,6 +13,7 @@ const EditProfileImage = () => {
     const [preview, setPreview] = React.useState<any>()
     const { data } = useAppSelector((state) => state);
     const dispatch = useAppDispatch()
+    const cookies = new Cookies()
 
     const handleHover = () => {
         setChangingImageButton(true);
@@ -46,6 +48,8 @@ const EditProfileImage = () => {
         }
         dispatch(changeProfileImage(info))
         setChangingImage(!changingImage);
+        cookies.remove("image",{path: "/"})
+        cookies.set("image",data.user.image,{path: "/"})
     }
 
     React.useEffect(() => {

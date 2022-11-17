@@ -52,7 +52,7 @@ const EditConfig = ({field,type, title}:Props) => {
 
     const onSubmit = (e:any) => {
         e.preventDefault()
-        console.log(RegExpresions[field])
+        // console.log(RegExpresions[field])
         if (RegExpresions[field].test(value)) {
             setError(false)
             setDisable(true)
@@ -70,8 +70,12 @@ const EditConfig = ({field,type, title}:Props) => {
                 position: 'top-center',
             })
             setTimeout(() => {
+                // console.log("iodddddddd->>>",cookies.get("id"));
+                
                 dispatch(getUserInfo(cookies.get("id")))
             }, 500);
+            cookies.remove(`${field}`,{path: "/"})
+            cookies.set(`${field}`,data.user[field],{path: "/"})
         } else {
             setError(true)
         }

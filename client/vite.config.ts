@@ -8,11 +8,11 @@ export default defineConfig({
    build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, '/client/src/page/Landing/Landing.tsx'),
-        home: resolve(__dirname, '/client/src/page/Home/Home.tsx'),
-        about: resolve(__dirname, '/client/src/page/About/About.tsx'),
-        dashboard: resolve(__dirname, '/client/src/page/Dashboard/Dashboard.tsx'),
-        dashadmin: resolve(__dirname, '/client/src/page/Dashboard/DAdmin.tsx'),
+        main: resolve(__dirname, 'client/src/page/Landing/Landing.tsx'),
+        home: resolve(__dirname, 'client/src/page/Home/Home.tsx'),
+        about: resolve(__dirname, 'client/src/page/About/About.tsx'),
+        dashboard: resolve(__dirname, 'client/src/page/Dashboard/Dashboard.tsx'),
+        dashadmin: resolve(__dirname, 'client/src/page/Dashboard/DAdmin.tsx'),
       }
     }
   }

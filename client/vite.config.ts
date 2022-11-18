@@ -9,11 +9,11 @@ export default defineConfig({
     react(),
     pages({
       dirs: [
+        {dir: 'src/page', baseRoute: ''},
         {dir: 'src/page/Landing', baseRoute: ''},
-        {dir: 'src/page/Home', baseRoute: 'Home'},
-        {dir: 'src/page/Dashboard', baseRoute: 'Dashboard'},
-        {dir: 'src/page/Dashboard', baseRoute: 'DAdmin'},
-        {dir: 'src/page/About', baseRoute: 'About'},
+        {dir: 'src/page/Home', baseRoute: ''},
+        {dir: 'src/page/Dashboard', baseRoute: ''},
+        {dir: 'src/page/About', baseRoute: ''},
       ],
       extensions: ['tsx,ts'],
       exclude: ['**/components/**/*'],

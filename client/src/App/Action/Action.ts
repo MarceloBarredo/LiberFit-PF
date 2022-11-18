@@ -30,9 +30,9 @@ const exercises = Json[0].exercises.map((d) => d);
 const products = Json[0].sedes.map((d) => d.products.map((d) => d));
 
 
-const Route = process.env.VITE_LOCAL_HOST
+const Route = import.meta.env.VITE_LOCAL_HOST
 // https://liberfit-back-production.up.railway.app
-const BASE_URL = process.env.VITE_BASE_URL;
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 export const getMainData = () => async (dispatch: any) => {
     try {

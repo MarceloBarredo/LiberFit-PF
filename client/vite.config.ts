@@ -18,5 +18,6 @@ export default defineConfig({
       extensions: ['tsx,ts'],
       exclude: ['**/components/**/*'],
     })
-  ]
+  ],
+  base: '/LiberFit-PF/'
 })
